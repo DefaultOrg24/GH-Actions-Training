@@ -12,9 +12,9 @@ jobs:
 
         - name: Set Color
           id: color-selector
-          run: echo 'Selected_Color=White' >> "$GITHUB_OUTPUT"
+          run: echo "SELECTED_COLOR=White" >> "$GITHUB_OUTPUT"
           
         - name: Get Color
           env:
-            SELECTED_COLOR: ${{ steps.color-selector.outputs.Selected_Color }}
+            SELECTED_COLOR: ${{ steps.color-selector.outputs.SELECTED_COLOR }}
           run: echo 'The selected color is $SELECTED_COLOR'
