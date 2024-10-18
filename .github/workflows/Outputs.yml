@@ -11,10 +11,8 @@ jobs:
         - uses: actions/checkout@v4
 
         - name: Set Color
-          id: color-selector
-          run: echo "SELECTED_COLOR=White" >> "$GITHUB_OUTPUT"
+          id: color_selector
+          run: echo "COLOR=White" >> "$GITHUB_OUTPUT"
           
         - name: Get Color
-          env:
-            SELECTED_COLOR: ${{ steps.color-selector.outputs.SELECTED_COLOR }}
-          run: echo 'The selected color is $SELECTED_COLOR'
+          run: echo 'The selected color is ${{ steps.color_selector.outputs.COLOR }}'
