@@ -1,4 +1,4 @@
-name: Greetings
+name: Reusable Workflow
 
 on:
     workflow_call
